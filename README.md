@@ -210,3 +210,4 @@ In Algolia dashboard chose your index and select Import configuration from Manag
 # storefront
 # storefront
 # storefronter
+"# storefronter" 
