@@ -3,6 +3,7 @@ import { Button } from "@/components/atoms"
 
 export const ContainerHero = () => {
   return (
+    <>
     <section className="bg-gray-100 py-16">
       <div className=" mx-auto px-0">
         {/* Hero Content */}
@@ -148,49 +149,271 @@ export const ContainerHero = () => {
         </div>
 
         {/* Benefits Section */}
-        <div className="mt-16 hidden">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Benefits Of
-            </h2>
-            <h3 className="text-3xl font-bold text-yellow-500">
-              Your Purchase
-            </h3>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z"/>
-                </svg>
+        <div className="mt-16 px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Left: Heading */}
+            <div className="text-left">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Benefits Of
+              </h2>
+              <h3 className="text-3xl font-bold text-yellow-500">
+                Your Purchase
+              </h3>
+            </div>
+            
+            {/* Right: Benefits Icons */}
+            <div className="grid grid-cols-3 gap-6">
+            <div className="text-left">
+              <div className="mb-4">
+                <Image
+                  src="/images/shield-check-security.png"
+                  width={80}
+                  height={80}
+                  alt="Security"
+                  className="w-20 h-20"
+                />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Security</h4>
-              <p className="text-gray-600">Secure payment and data protection</p>
+              {/* <p className="text-gray-600">Secure payment and data protection</p> */}
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                </svg>
+            <div className="text-left">
+              <div className="mb-4">
+                <Image
+                  src="/images/shield-check-star.png"
+                  width={80}
+                  height={80}
+                  alt="Customer reviews"
+                  className="w-20 h-20"
+                />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Customer reviews</h4>
-              <p className="text-gray-600">Rated by thousands of customers</p>
+              {/* <p className="text-gray-600">Rated by thousands of customers</p> */}
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-8 h-8 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
-                </svg>
+            <div className="text-left">
+              <div className="mb-4">
+                <Image
+                  src="/images/shield-check-money.png"
+                  width={80}
+                  height={80}
+                  alt="Payment methods"
+                  className="w-20 h-20"
+                />
               </div>
               <h4 className="text-lg font-semibold text-gray-900 mb-2">Payment methods</h4>
-              <p className="text-gray-600">Multiple secure payment options</p>
+              {/* <p className="text-gray-600">Multiple secure payment options</p> */}
+            </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    {/* Map Section */}
+    <section className="bg-slate-800 py-16">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-center items-center min-h-[400px] relative">
+          {/* Map - Centered */}
+          <div className="relative">
+            <Image
+              src="/images/map.png"
+              width={600}
+              height={400}
+              alt="Map showing all available locations with yellow dots"
+              className="w-full h-auto max-w-2xl"
+            />
+          </div>
+          
+          {/* Text - Bottom Left */}
+          <div className="absolute bottom-8 left-8 text-white">
+            <p className="text-lg font-medium">
+              Discover all Locations
+              <br />
+              on desirable Area
+            </p>
+          </div>
+
+          {/* Map controls - Bottom Right */}
+          <div className="absolute bottom-8 right-8 flex flex-col gap-2">
+            <button className="w-10 h-10 bg-yellow-500 rounded flex items-center justify-center text-black font-bold hover:bg-yellow-600 transition-colors">
+              +
+            </button>
+            <button className="w-10 h-10 bg-white rounded flex items-center justify-center text-black font-bold hover:bg-gray-100 transition-colors">
+              -
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Our Process Section */}
+    <section className="bg-gray-100 py-16">
+      <div className="container mx-auto px-4">
+        <div className="mb-12">
+          <h2 className="text-4xl font-bold text-gray-900 mb-8">
+            Our <span className="text-yellow-500">Process</span>
+          </h2>
+        </div>
+
+        {/* Process Timeline */}
+        <div className="relative">
+          {/* Timeline Line */}
+          <div className="absolute top-6 left-0 right-0 h-0.5 bg-gray-300 hidden md:block"></div>
+          
+          {/* Process Steps */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* Step 01 */}
+            <div className="relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center relative z-10">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
+                </div>
+                <div className="md:hidden ml-4">
+                  <h3 className="text-2xl font-bold text-gray-900">01</h3>
+                </div>
+              </div>
+              <div className="md:block hidden">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">01</h3>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Lorem ipsum dolor sit amet,</h4>
+              <p className="text-gray-600 text-sm">
+                Etiam sit vulputate augue Integer non neque consequat, tringilla magna ac, vulputate nulla. Vestibulum eu ipsum tempor.
+              </p>
+            </div>
+
+            {/* Step 02 */}
+            <div className="relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center relative z-10">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
+                </div>
+                <div className="md:hidden ml-4">
+                  <h3 className="text-2xl font-bold text-gray-900">02</h3>
+                </div>
+              </div>
+              <div className="md:block hidden">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">02</h3>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Lorem ipsum dolor sit amet,</h4>
+              <p className="text-gray-600 text-sm">
+                Etiam sit vulputate augue Integer non neque consequat, tringilla magna ac, vulputate nulla. Vestibulum eu ipsum tempor.
+              </p>
+            </div>
+
+            {/* Step 03 */}
+            <div className="relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center relative z-10">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
+                </div>
+                <div className="md:hidden ml-4">
+                  <h3 className="text-2xl font-bold text-gray-900">03</h3>
+                </div>
+              </div>
+              <div className="md:block hidden">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">03</h3>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Lorem ipsum dolor sit amet,</h4>
+              <p className="text-gray-600 text-sm">
+                Etiam sit vulputate augue Integer non neque consequat, tringilla magna ac, vulputate nulla. Vestibulum eu ipsum tempor.
+              </p>
+            </div>
+
+            {/* Step 04 */}
+            <div className="relative">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center relative z-10">
+                  <div className="w-6 h-6 bg-orange-500 rounded-full"></div>
+                </div>
+                <div className="md:hidden ml-4">
+                  <h3 className="text-2xl font-bold text-gray-900">04</h3>
+                </div>
+              </div>
+              <div className="md:block hidden">
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">04</h3>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Lorem ipsum dolor sit amet,</h4>
+              <p className="text-gray-600 text-sm">
+                Etiam sit vulputate augue Integer non neque consequat, tringilla magna ac, vulputate nulla. Vestibulum eu ipsum tempor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Footer */}
+    <footer className="bg-slate-800 py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Image
+              src="/logov1.png"
+              width={80}
+              height={54}
+              alt="Container Entsorgung Shop Logo"
+              className="mr-1 aspect-video"
+            />
+            <div>
+              <h3 className="font-extrabold text-yellow-500">container</h3>
+              <p className="font-extrabold text-yellow-500">entsorgung.<span className="text-white">shop</span></p>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-7 lg:col-span-2 gap-4 text-sm">
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Container</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Big-Bag</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Materialien</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Bauschaf</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Schnitt</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">Abholung</a>
+            <a href="#" className="text-gray-300 hover:text-white transition-colors">FAQ</a>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-end space-x-3">
+            <a href="#" className="w-8 h-8 relative bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-500 transition-colors">
+              <Image
+                src="/icons/Youtube.svg"
+                fill
+                alt="YouTube"
+              />
+            </a>
+            <a href="#" className="w-8 h-8 relative bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-500 transition-colors">
+              <Image
+                src="/icons/Facebook.svg"
+                fill
+                alt="Facebook"
+              />
+            </a>
+            <a href="#" className="w-8 h-8 relative bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-500 transition-colors">
+              <Image
+                src="/icons/Linkedin.svg"
+                fill
+                alt="LinkedIn"
+              />
+            </a>
+            <a href="#" className="w-8 h-8 relative bg-gray-600 rounded-full flex items-center justify-center hover:bg-gray-500 transition-colors">
+              <Image
+                src="/icons/Instagram.svg"
+                fill
+                alt="Instagram"
+              />
+            </a>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="border-t border-gray-700 mt-8 pt-6 text-center">
+          <p className="text-white text-sm">
+            © {new Date().getFullYear()} <span className="font-extrabold">containerentsorgung.shop</span> - Alle Rechte vorbehalten.
+          </p>
+        </div>
+      </div>
+    </footer>
+    </>
   )
 }
